@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="Css/bootstrap.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <title>Abhishek Portfolio</title>
+</head>
+<body>
+    <!-- here is the starting web   -->
+    <!-- Main div   -->
+    <main>
+        <!-- header start   -->
+        <header>
+            <!-- logo start  -->
+            <div class="logo">Logo</div>
+            <!-- logo end   -->
+            <!-- searchbar start   -->
+            <div class="searchbar">
+                <form  method="post">
+                    <input type="search" class="search" name="searchbar" placeholder="Search">
+                    <input type="button" class="btn" value="Search"/>
+                </form>
+            </div>
+            <!-- searchbar end   -->
+            <!-- navigation start   -->
+            <nav> 
+                <ul class="nav">
+                    <li class="nav-item"><a href="#" class="nav-link text-black">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-black">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-black">Gallery</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-black">Contact Us</a></li>
+                </ul>
+            </nav>
+            <!-- navigation end   -->
+            <!-- harmburger for small device start -->
+            <div class="harmburger" id="harmburger">
+                <img src="Images/mobile-nav-icon.png" width="60px" height="60px" alt="nav" id="btn-1">
+            </div>
+            <!-- harmburger end  -->
+            <!-- sidebar for small device start -->
+             <div class="sidebar bg-black d-flex justify-content-between d-none" id="sidebar">
+                <ul class="nav d-flex flex-column">
+                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Gallery</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+                </ul>
+                <div class="btn-2 text-white" id="btn-2">X</div>
+             </div>
+            <!-- sidebar end   -->
+        </header>
+        <!-- header end   -->
+
+        <!-- slider start  -->
+        <div class="slider">
+            <!-- Slider main container -->
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img src="images/kithenback3.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/barn house 1.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/Summer house 1.jpg" alt=""></div>
+      ...
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+
+  </div>
+        </div>
+    </main>
+
+    <!-- javascript  -->
+    <script>
+        var btn1 = document.getElementById("btn-1").onclick = function(){
+            var harmburger = document.getElementById("harmburger").style.visibility = "hidden";
+            var sidebar = document.getElementById("sidebar").classList.remove("d-none");
+        }
+
+        var btn2 = document.getElementById("btn-2").onclick = function(){
+            var harmburger = document.getElementById("harmburger").style.visibility = "visible";
+            var sidebar = document.getElementById("sidebar").classList.add("d-none");
+        }
+
+    </script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+                const swiper = new Swiper('.swiper', {
+  // Optional parameters
+autoplay : {
+    delay : 3000,
+    disableOnInteraction:false,
+},
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable:true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+ 
+});
+    </script>
+</body>
+</html>
